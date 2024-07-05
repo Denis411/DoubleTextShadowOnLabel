@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B155B1E2C3821B9006C9A87 /* LabelWithDoubleShadow2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B155B1D2C3821B9006C9A87 /* LabelWithDoubleShadow2.swift */; };
+		4B155B202C3821E0006C9A87 /* LabelWithDoubleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B155B1F2C3821E0006C9A87 /* LabelWithDoubleShadow.swift */; };
 		4B5DE1922C340133008CFB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DE1912C340133008CFB17 /* AppDelegate.swift */; };
 		4B5DE1942C340133008CFB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DE1932C340133008CFB17 /* SceneDelegate.swift */; };
 		4B5DE1962C340133008CFB17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5DE1952C340133008CFB17 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B155B1D2C3821B9006C9A87 /* LabelWithDoubleShadow2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithDoubleShadow2.swift; sourceTree = "<group>"; };
+		4B155B1F2C3821E0006C9A87 /* LabelWithDoubleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithDoubleShadow.swift; sourceTree = "<group>"; };
 		4B5DE18E2C340133008CFB17 /* DoubleShadowOnText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleShadowOnText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5DE1912C340133008CFB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B5DE1932C340133008CFB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				4B5DE1912C340133008CFB17 /* AppDelegate.swift */,
 				4B5DE1932C340133008CFB17 /* SceneDelegate.swift */,
 				4B5DE1952C340133008CFB17 /* ViewController.swift */,
+				4B155B1F2C3821E0006C9A87 /* LabelWithDoubleShadow.swift */,
+				4B155B1D2C3821B9006C9A87 /* LabelWithDoubleShadow2.swift */,
 				4B5DE1972C340133008CFB17 /* Main.storyboard */,
 				4B5DE19A2C340134008CFB17 /* Assets.xcassets */,
 				4B5DE19C2C340134008CFB17 /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				4B5DE1962C340133008CFB17 /* ViewController.swift in Sources */,
 				4B5DE1922C340133008CFB17 /* AppDelegate.swift in Sources */,
+				4B155B202C3821E0006C9A87 /* LabelWithDoubleShadow.swift in Sources */,
+				4B155B1E2C3821B9006C9A87 /* LabelWithDoubleShadow2.swift in Sources */,
 				4B5DE1942C340133008CFB17 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
