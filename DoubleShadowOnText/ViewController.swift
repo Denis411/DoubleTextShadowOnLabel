@@ -12,9 +12,6 @@ final class LabelWithShadow: UILabel {
     let firstShadowLayer = CATextLayer()
     let secondShadowLayer = CATextLayer()
     
-    let firstShadowBlur = CIFilter.bokehBlur()
-    let secondShadowBlur = CIFilter.bokehBlur()
-    
     override var text: String? {
         didSet {
             firstShadowLayer.string = text
@@ -26,8 +23,8 @@ final class LabelWithShadow: UILabel {
         didSet {
             firstShadowLayer.font = font
             secondShadowLayer.font = font
-            firstShadowLayer.fontSize = 40
-            secondShadowLayer.fontSize = 40
+            firstShadowLayer.fontSize = 19
+            secondShadowLayer.fontSize = 19
         }
     }
     
@@ -43,15 +40,9 @@ final class LabelWithShadow: UILabel {
         firstShadowLayer.shadowColor = Self.firstShadowDefaultColor.cgColor
         firstShadowLayer.shadowOpacity = 0.5
         
-        firstShadowBlur.radius = 2.0
-        firstShadowLayer.filters = [firstShadowBlur]
-        
-        secondShadowLayer.shadowOffset = CGSize(width: 0, height: 2)
+        secondShadowLayer.shadowOffset = CGSize(width: 0, height: 0)
         secondShadowLayer.shadowColor = Self.secondShadowDefaultColor.cgColor
         secondShadowLayer.shadowOpacity = 0.2
-        
-        secondShadowBlur.radius = 16.0
-        secondShadowLayer.filters = [secondShadowBlur]
     }
     
     required init?(coder: NSCoder) {
@@ -79,7 +70,7 @@ final class ViewController: UIViewController {
     private let label: LabelWithShadow = {
         let label = LabelWithShadow()
         label.textColor = .white
-        label.font = .systemFont(ofSize: 40, weight: .semibold)
+        label.font = .systemFont(ofSize: 19, weight: .semibold)
         label.text = "Новинки"
         return label
     }()
