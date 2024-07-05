@@ -23,8 +23,8 @@ final class LabelWithDoubleShadow: UILabel {
         didSet {
             firstShadowLayer.font = font
             secondShadowLayer.font = font
-            firstShadowLayer.fontSize = 19
-            secondShadowLayer.fontSize = 19
+            firstShadowLayer.fontSize = font.pointSize
+            secondShadowLayer.fontSize = font.pointSize
         }
     }
     
