@@ -8,9 +8,9 @@
 import UIKit
 import CoreImage.CIFilterBuiltins
 
-final class LabelWithShadow: UILabel {
-    let firstShadowLayer = CATextLayer()
-    let secondShadowLayer = CATextLayer()
+final class LabelWithDoubleShadow: UILabel {
+    private let firstShadowLayer = CATextLayer()
+    private let secondShadowLayer = CATextLayer()
     
     override var text: String? {
         didSet {
@@ -55,20 +55,28 @@ final class LabelWithShadow: UILabel {
         secondShadowLayer.frame = self.bounds
     }
     
-    func setShadowColor(color: UIColor) {
-        firstShadowLayer.shadowColor = color.cgColor
-        secondShadowLayer.shadowColor = color.cgColor
+    func setShadow(hasShadow: Bool, color: UIColor?) {
+        guard hasShadow else {
+            firstShadowLayer.shadowOpacity = 0
+            secondShadowLayer.shadowOpacity = 0
+            return
+        }
+        
+        if let color, hasShadow {
+            firstShadowLayer.shadowColor = color.cgColor
+            secondShadowLayer.shadowColor = color.cgColor
+        }
     }
 }
 
-private extension LabelWithShadow {
+private extension LabelWithDoubleShadow {
     static let firstShadowDefaultColor = UIColor(red: 0, green: 0, blue: 85, alpha: 1)
     static let secondShadowDefaultColor = UIColor(red: 0, green: 0, blue: 119, alpha: 1)
 }
 
 final class ViewController: UIViewController {
-    private let label: LabelWithShadow = {
-        let label = LabelWithShadow()
+    private let label: LabelWithDoubleShadow = {
+        let label = LabelWithDoubleShadow()
         label.textColor = .white
         label.font = .systemFont(ofSize: 19, weight: .semibold)
         label.text = "Новинки"
