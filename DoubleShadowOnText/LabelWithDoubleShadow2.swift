@@ -72,6 +72,6 @@ class LabelWithDoubleShadow2: UILabel {
 }
 
 private extension LabelWithDoubleShadow2 {
-    static let firstShadowDefaultColor = UIColor.green
+    static let firstShadowDefaultColor = UIColor.black
     static let secondShadowDefaultColor = UIColor.red
 }
